@@ -10,9 +10,8 @@ import com.example.emsbackend.service.EmployeeService;
 import lombok.AllArgsConstructor;
 
 import java.util.List;
-
+@CrossOrigin("*")
 @AllArgsConstructor
-
 @RestController
 @RequestMapping("/api/Employee")
 public class EmployeeController {
