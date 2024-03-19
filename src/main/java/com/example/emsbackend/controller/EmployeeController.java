@@ -8,7 +8,7 @@ import com.example.emsbackend.dto.EmployeeDto;
 import com.example.emsbackend.service.EmployeeService;
 
 import lombok.AllArgsConstructor;
-
+		
 import java.util.List;
 @CrossOrigin("*")
 @AllArgsConstructor
@@ -20,7 +20,7 @@ public class EmployeeController {
 	
 	//addemployee api
 	@PostMapping
-	public ResponseEntity<EmployeeDto> creatEmployee(@RequestBody EmployeeDto employeeDto){
+	public ResponseEntity<EmployeeDto> createEmployee(@RequestBody EmployeeDto employeeDto){
 		EmployeeDto savedEmployee=employeeService.creatEmployee(employeeDto);
 		return new ResponseEntity<>(savedEmployee,HttpStatus.CREATED);
 				

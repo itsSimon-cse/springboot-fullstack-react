@@ -1,6 +1,7 @@
 import React,{useEffect,useState} from 'react'
 import {listEmployees} from '../services/EmployeeService.js'
 import { useNavigate } from 'react-router-dom'
+
 const ListEmployeeComponent = () => {
 
     const [employees, setEmployees]= useState([])
@@ -28,6 +29,7 @@ const ListEmployeeComponent = () => {
                     <th>first name</th>
                     <th>Last name</th>
                     <th>eid</th>
+                    <th>actions</th>
                 </tr>
             </thead>
             <tbody>
@@ -38,7 +40,9 @@ const ListEmployeeComponent = () => {
                 <td>{employee.firstName}</td>
                 <td>{employee.lastName}</td>
                 <td>{employee.email}</td>
-
+                <td>
+                    <button className='btn btn-info' onClick={()=> updateEmployee(employee.id)}>update</button>
+                </td>
             </tr>)
     }
                 
